@@ -1,0 +1,44 @@
+{
+	"name": "Adobe Experience Manager",
+	"image": "mcr.microsoft.com/devcontainers/base:${templateOption:imageVariant}",
+
+	// 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
+	"features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "configureZshAsDefaultShell": true
+        },
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "${templateOption:nodeJsVersion}"
+        },
+        "ghcr.io/devcontainers/features/java:1": {
+            "jdkDistro": "zulu",
+            "version": "11",
+            "installMaven": true
+        },
+        "ghcr.io/juan-ayala/devcontainer-features/aem-sdk:1": {
+            "sdksDirectory": "${templateOption:sdksDirectory}",
+            "sdkVersion": "${templateOption:sdkVersion}",
+            "authorPort": "${templateOption:authorPort}",
+            "publishPort": "${templateOption:publishPort}",
+            "dispatcherPort": "${templateOption:dispatcherPort}"
+        }
+    },
+
+	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [
+        "${templateOption:authorPort}",
+        "3${templateOption:authorPort}",
+        "${templateOption:publishPort}",
+        "3${templateOption:publishPort}",
+        "${templateOption:dispatcherPort}"
+    ],
+
+	// 👇 Configure tool-specific properties.
+	"customizations": {
+        "vscode": {
+            "settings": {
+                "java.compile.nullAnalysis.mode": "automatic"
+            }
+        }
+    }
+}
