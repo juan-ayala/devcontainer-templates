@@ -1,0 +1,52 @@
+{
+    "id": "aem",
+    "version": "1.0.0",
+    "name": "Adobe Experience Manager",
+    "description": "Develop AEM applications.",
+    "documentationURL": "https://github.com/juan-ayala/devcontainer-templates/tree/main/src/aem",
+    "licenseURL": "https://github.com/juan-ayala/devcontainer-templates/blob/main/LICENSE",
+    "options": {
+        "imageVariant": {
+            "type": "string",
+            "description": "Container image variant",
+            "proposals": [
+                "debian",
+                "ubuntu"
+            ],
+            "default": "debian"
+        },
+        "nodeJsVersion": {
+            "type": "string",
+            "description": "Node.js version to install.",
+            "default": "12.22.7"
+        },
+        "sdksDirectory": {
+            "type": "string",
+            "description": "Path to directory that contains one or more SDKs. This should be relative to the container workspace folder.",
+            "default": ".devcontainer"
+        },
+        "sdkVersion": {
+            "type": "string",
+            "description": "AEM SDK Version that will be retreived from the SDKs directory.",
+            "default": "automatic"
+        },
+        "authorPort": {
+            "type": "string",
+            "description": "Author service port",
+            "default": "4502"
+        },
+        "publishPort": {
+            "type": "string",
+            "description": "Publish service port",
+            "default": "4503"
+        },
+        "dispatcherPort": {
+            "type": "string",
+            "description": "Dispatcher port",
+            "default": "8080"
+        }
+    },
+    "platforms": [
+        "Any"
+    ]
+}

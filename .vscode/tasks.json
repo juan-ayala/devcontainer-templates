@@ -1,0 +1,26 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Template: aem",
+            "type": "shell",
+            "command": "./.github/actions/smoke-test/build.sh",
+            "args": [
+                "aem"
+            ]
+        },
+        {
+            "label": "Test Template: aem",
+            "type": "shell",
+            "command": "./.github/actions/smoke-test/test.sh",
+            "dependsOn": [
+                "Build Template: aem"
+            ],
+            "args": [
+                "aem"
+            ]
+        }
+    ]
+}
