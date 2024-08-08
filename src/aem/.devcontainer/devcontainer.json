@@ -2,6 +2,9 @@
 	"name": "Adobe Experience Manager",
 	"image": "mcr.microsoft.com/devcontainers/base:${templateOption:imageVariant}",
 
+	// mark the worksapce folder safe for git
+	"postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+
 	// 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
 	"features": {
         "ghcr.io/devcontainers/features/common-utils:2": {

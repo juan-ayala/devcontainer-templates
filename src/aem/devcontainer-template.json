@@ -1,6 +1,6 @@
 {
     "id": "aem",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "name": "Adobe Experience Manager",
     "description": "Develop AEM applications.",
     "documentationURL": "https://github.com/juan-ayala/devcontainer-templates/tree/main/src/aem",
