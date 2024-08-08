@@ -19,31 +19,6 @@
             "type": "string",
             "description": "Node.js version to install.",
             "default": "12.22.7"
-        },
-        "sdksDirectory": {
-            "type": "string",
-            "description": "Path to directory that contains one or more SDKs. This should be relative to the container workspace folder.",
-            "default": ".devcontainer"
-        },
-        "sdkVersion": {
-            "type": "string",
-            "description": "AEM SDK Version that will be retreived from the SDKs directory.",
-            "default": "automatic"
-        },
-        "authorPort": {
-            "type": "string",
-            "description": "Author service port",
-            "default": "4502"
-        },
-        "publishPort": {
-            "type": "string",
-            "description": "Publish service port",
-            "default": "4503"
-        },
-        "dispatcherPort": {
-            "type": "string",
-            "description": "Dispatcher port",
-            "default": "8080"
         }
     },
     "platforms": [
