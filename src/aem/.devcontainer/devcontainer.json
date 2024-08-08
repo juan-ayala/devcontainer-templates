@@ -18,7 +18,9 @@
             "version": "11",
             "installMaven": true
         },
-        "ghcr.io/juan-ayala/devcontainer-features/aem-sdk:1": {}
+        "ghcr.io/juan-ayala/devcontainer-features/aem-sdk:1": {
+            "sdksDirectory": "${containerWorkspaceFolder}/.devcontainer"
+        }
     },
 
 	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
