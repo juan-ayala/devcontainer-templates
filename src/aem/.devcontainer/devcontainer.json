@@ -15,30 +15,15 @@
             "version": "11",
             "installMaven": true
         },
-        "ghcr.io/juan-ayala/devcontainer-features/aem-sdk:1": {
-            "sdksDirectory": "${templateOption:sdksDirectory}",
-            "sdkVersion": "${templateOption:sdkVersion}",
-            "authorPort": "${templateOption:authorPort}",
-            "publishPort": "${templateOption:publishPort}",
-            "dispatcherPort": "${templateOption:dispatcherPort}"
-        }
+        "ghcr.io/juan-ayala/devcontainer-features/aem-sdk:1": {}
     },
 
 	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
-        "${templateOption:authorPort}",
-        "3${templateOption:authorPort}",
-        "${templateOption:publishPort}",
-        "3${templateOption:publishPort}",
-        "${templateOption:dispatcherPort}"
-    ],
-
-	// 👇 Configure tool-specific properties.
-	"customizations": {
-        "vscode": {
-            "settings": {
-                "java.compile.nullAnalysis.mode": "automatic"
-            }
-        }
-    }
+        4502,
+        34502,
+        4503,
+        34503,
+        8080
+    ]
 }
